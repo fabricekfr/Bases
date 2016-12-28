@@ -1,0 +1,4 @@
+C:\Users\fkwitond\Desktop\test\ClientModel\bin\Debug\ClientModel.dll
+C:\Users\fkwitond\Desktop\test\ClientModel\bin\Debug\ClientModel.pdb
+C:\Users\fkwitond\Desktop\test\ClientModel\obj\Debug\ClientModel.dll
+C:\Users\fkwitond\Desktop\test\ClientModel\obj\Debug\ClientModel.pdb

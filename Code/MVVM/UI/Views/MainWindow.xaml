@@ -1,0 +1,43 @@
+﻿<Window x:Class="UI.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ignore="http://www.galasoft.ch/ignore"
+        xmlns:views="clr-namespace:UI.Views"
+        xmlns:viewModels="clr-namespace:Presentation.ViewModels;assembly=Presentation"
+        mc:Ignorable="d ignore" Title="Mvvm base"  Height="600">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Skins/MainSkin.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <viewModels:MyObjectViewModel x:Key="MyObjectViewModel" />
+        </ResourceDictionary>
+       
+    </Window.Resources>
+
+    <StackPanel>
+
+        <TextBlock FontSize="18"
+                   FontWeight="Bold"
+                   Foreground="DarkSlateGray"
+                   Text="{Binding WelcomeTitle}"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   TextWrapping="Wrap" 
+                   Padding="0,0,0,15"/>
+
+        <TabControl>
+
+            <TabItem Header="MyObject">
+                <views:MyObject DataContext="{StaticResource MyObjectViewModel}" />
+            </TabItem>
+
+        </TabControl>
+
+    </StackPanel>
+
+
+</Window>
